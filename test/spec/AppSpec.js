@@ -18,7 +18,6 @@ describe('App', function() {
   });
 
   it('creates a song queue on initialize', function(){
-    console.log(app.get('songQueue'));
     expect(app.get('songQueue') instanceof MyTunes.Collections.SongQueue).toBeTruthy();
   });
 
