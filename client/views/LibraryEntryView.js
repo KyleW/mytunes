@@ -10,6 +10,7 @@ MyTunes.Views.LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
+      debugger;
       this.model.play();
     }
   },

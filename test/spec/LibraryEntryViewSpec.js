@@ -2,14 +2,14 @@ describe('LibraryEntryView', function() {
   var view, model;
 
   beforeEach(function() {
-    model = new MyTunes.Collections.Songs({
+    model = new MyTunes.Models.SongModel({
       artist: 'Fakey McFakerson',
       title: 'Never Gonna Mock You Up',
       url: 'example/url'
     });
     // spyOn(Song.prototype, 'enqueue'); // Uncomment this when working on the second test
    //spyOn(MyTunes.Collections.Songs.prototype, 'play'); //original version'
-    spyOn(MyTunes.Models.SongModel.prototype, 'play');
+    spyOn(model, 'play');
     view = new MyTunes.Views.LibraryEntryView({model: model});
     view.render();
   });
