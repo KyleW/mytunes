@@ -13,6 +13,7 @@ MyTunes.Collections.SongQueue = MyTunes.Collections.Songs.extend({
 
     this.on('add',function(){
       if (this.length === 1){
+        console.log(this);
         this.playFirst();
       }
     }, this);
@@ -24,7 +25,7 @@ MyTunes.Collections.SongQueue = MyTunes.Collections.Songs.extend({
       }
     }, this);
   },
-  
+
   playFirst : function(song) {
     this.at(0).play();
   }
