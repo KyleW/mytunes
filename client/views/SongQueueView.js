@@ -6,10 +6,10 @@ MyTunes.Views.SongQueueView = Backbone.View.extend({
 
   initialize: function() {
      this.collection.on('remove', function() {
-       console.log("We're being removed");
+       this.render();
      },this);
      this.collection.on('add', function() {
-       console.log("We're being added");
+       this.render();
      },this);
   },
 
