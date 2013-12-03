@@ -2,6 +2,10 @@
 window.MyTunes = window.MyTunes || {};
 window.MyTunes.Views = window.MyTunes.Views || {};
 
+var $playlists=$('<table>')
+  .addClass('playlists')
+  .html('<th>Playlists<th><button id="save">Save Playlist</button>');
+
 MyTunes.Views.AppView = Backbone.View.extend({
 
   initialize: function(params){
@@ -15,11 +19,14 @@ MyTunes.Views.AppView = Backbone.View.extend({
 
   },
 
+
+
   render: function(){
     return this.$el.html([
       this.playerView.$el,
       this.libraryView.$el,
-      this.queueView.$el
+      this.queueView.$el,
+      $playlists
     ]);
   }
 
