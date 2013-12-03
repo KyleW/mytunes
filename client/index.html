@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <body>
+<head>
+  <title>MyTunes</title>
+</head>
+<body>
+
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
-     below them until after the scripts load-->
+    below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
@@ -22,18 +28,34 @@
     <script src="views/AppView.js"></script>
 
     <script>
-      $(function(){
-        // set up model objects
-        var library = new MyTunes.Collections.Songs(songData);
+    $(function(){
+      // if(localStorage.app === undefined){
+            // set up model objects
+            var library =  new MyTunes.Collections.Songs(songData);
+            var app =  new MyTunes.Models.AppModel({library: library});
 
-        var app = new MyTunes.Models.AppModel({library: library});
+            // build a view for the top level of the whole app
+            var appView =  new MyTunes.Views.AppView({model: app});
 
-        // build a view for the top level of the whole app
-        var appView = new MyTunes.Views.AppView({model: app});
+            // put the view onto the screen
+            $('body').append(appView.render());
+          // else {
+          //   console.log("Using the saved state")
+          //   var library = localStorage.library;
+          //   var app =  localStorage.app;
 
-        // put the view onto the screen
-        $('body').append(appView.render());
+          //   // build a view for the top level of the whole app
+          //   var appView = localStorage.appView;
+          // }
+
+        setInterval(function(){
+          console.log("SAVING ZE DATA")
+          localStorage.library= JSON.stringify(library);
+          localStorage.app = JSON.stringify(app);
+          localStorage.appView = JSON.stringify(appView);
+        },10000)
       });
     </script>
+    <span id="heading">MyTunes</span>
   </body>
-</html>
+  </html>

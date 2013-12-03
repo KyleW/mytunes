@@ -1,0 +1,40 @@
+body {
+  background-color: gray;
+}
+audio {
+  float:left;
+  clear:left;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 40px;
+}
+
+table {
+  background-color: #496370;
+  border: 4px solid black;
+  margin:10px;
+  float:left;
+  width:400px;
+  min-height:50px;
+}
+
+.library{
+  margin-left: 50px;
+}
+
+.songQueue {
+  clear:left;
+}
+
+.clear {
+  float:none;
+  clear:both;
+}
+
+#heading{
+  font-size: 2.5em;
+  margin:50px;
+  margin-left: auto;
+  margin-right: auto
+  text-align:center;
+}
