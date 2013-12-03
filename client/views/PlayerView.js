@@ -10,8 +10,7 @@ MyTunes.Views.PlayerView = Backbone.View.extend({
 
   initialize: function() {
     this.model.on('ended', function(model){
-    console.log("HERE!");
-    this.playerView.setSong(model.get('currentSong'));
+      this.playerView.setSong(model.get('currentSong'));
     }, this);
   },
 

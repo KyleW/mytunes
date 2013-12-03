@@ -27,8 +27,13 @@
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
 
+
+    <div id="heading">MyTunes</div>
     <div id="main">
-      <div id="heading">MyTunes</div>
+      <div id="playLists">
+        <h3>Playlists</h3>
+        <button id="save">Save Playlist</button>;
+      </div>
     </div>
 
     <script>
@@ -43,6 +48,8 @@
 
             // put the view onto the screen
             $('#main').append(appView.render());
+
+
           // else {
           //   console.log("Using the saved state")
           //   var library = localStorage.library;
@@ -60,6 +67,8 @@
         // },10000)
       });
     </script>
+
+    <script src="playlist.js"></script>
 
   </body>
   </html>
