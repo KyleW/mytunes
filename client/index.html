@@ -27,6 +27,10 @@
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
 
+    <div id="main">
+      <div id="heading">MyTunes</div>
+    </div>
+
     <script>
     $(function(){
       // if(localStorage.app === undefined){
@@ -38,7 +42,7 @@
             var appView =  new MyTunes.Views.AppView({model: app});
 
             // put the view onto the screen
-            $('body').append(appView.render());
+            $('#main').append(appView.render());
           // else {
           //   console.log("Using the saved state")
           //   var library = localStorage.library;
@@ -48,14 +52,14 @@
           //   var appView = localStorage.appView;
           // }
 
-        setInterval(function(){
-          console.log("SAVING ZE DATA")
-          localStorage.library= JSON.stringify(library);
-          localStorage.app = JSON.stringify(app);
-          localStorage.appView = JSON.stringify(appView);
-        },10000)
+        // setInterval(function(){
+        //   console.log("SAVING ZE DATA")
+        //   localStorage.library= JSON.stringify(library);
+        //   localStorage.app = JSON.stringify(app);
+        //   localStorage.appView = JSON.stringify(appView);
+        // },10000)
       });
     </script>
-    <span id="heading">MyTunes</span>
+
   </body>
   </html>

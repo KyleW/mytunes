@@ -1,29 +1,42 @@
-body {
-  background-color: gray;
+* {
+  font-family: helvetica;
+  font-size: 12px;
+  /*border: 2px red dashed;*/
 }
+
+body {
+  background-color: #496370;
+}
+
 audio {
   float:left;
   clear:left;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:10px;
   margin-bottom: 40px;
+  width:45%;
 }
 
 table {
   background-color: #496370;
-  border: 4px solid black;
-  margin:10px;
-  float:left;
-  width:400px;
+  border: 2px solid black;
   min-height:50px;
+  margin:0 10px 10px 10px;
+  border-radius:5px;
+}
+
+button {
+  font-size: 8px;
 }
 
 .library{
-  margin-left: 50px;
+  float:right;
+  width:45%;
 }
 
 .songQueue {
   clear:left;
+  float:left;
+  width:45%;
 }
 
 .clear {
@@ -34,7 +47,15 @@ table {
 #heading{
   font-size: 2.5em;
   margin:50px;
+  text-align: center;
+}
+
+#main {
+  width:700px;
+  height: 300px;
+  background: gray;
   margin-left: auto;
-  margin-right: auto
-  text-align:center;
+  margin-right: auto;
+  margin-top: 0;
+  border-radius:5px;
 }
