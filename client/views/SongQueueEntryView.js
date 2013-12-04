@@ -12,7 +12,7 @@ MyTunes.Views.SongQueueEntryView = Backbone.View.extend({
       this.model.play();
     },
     'click .remove': function() {
-      this.remove(this.model);
+      this.model.dequeue();
     }
   },
 

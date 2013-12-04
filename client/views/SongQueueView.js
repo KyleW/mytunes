@@ -5,7 +5,7 @@ window.MyTunes.Views = window.MyTunes.Views || {};
 MyTunes.Views.SongQueueView = Backbone.View.extend({
   tagName: "table",
   initialize: function() {
-    this.render();
+    // this.render();
 
     this.collection.on('remove', function() {
       this.render();
