@@ -45,6 +45,10 @@ button {
   clear:left;
   float:left;
   width:45%;
+  height:120px;
+  background-color: #496370;
+  border: 2px solid black;
+  border-radius:5px;
 }
 
 .clear {
@@ -60,7 +64,7 @@ button {
 
 #main {
   width:700px;
-  height: 300px;
+  height: 200px;
   background: gray;
   padding-top: 20px;
   margin-left: auto;
