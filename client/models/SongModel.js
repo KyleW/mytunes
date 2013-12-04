@@ -3,8 +3,8 @@ window.MyTunes = window.MyTunes || {};
 window.MyTunes.Models = window.MyTunes.Models || {};
 
 MyTunes.Models.SongModel = Backbone.Model.extend({
-
   play: function(){
+    this.attributes.playCount++;
     // Triggering an event here will also trigger the event on the collection
     this.trigger('play', this);
   },
@@ -16,5 +16,14 @@ MyTunes.Models.SongModel = Backbone.Model.extend({
   },
   dequeue: function(){
     this.trigger('dequeue',this);
-  }
+  },
+
+  // defaults:{
+  //   playCount:0
+  // }
+   defaults: function() {
+     this.attributes.playCount = 0; 
+   }
 });
+
+

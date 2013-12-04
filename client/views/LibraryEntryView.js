@@ -6,11 +6,13 @@ MyTunes.Views.LibraryEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td>(<%= artist %>)</td><td><%= title %></td><td><button class= "add">Add to Queue</button></td>'),
+  template: _.template('<td>(<%= artist %>)</td>\
+    <td><%= title %></td>\
+    <td><%= playCount %></td>\
+    <td><button class= "add">Add to Queue</button></td>'),
 
   events: {
     'click .add': function() {
-      console.log(this.model);
       this.model.enqueue();
     }
   },

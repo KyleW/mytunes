@@ -7,64 +7,64 @@
 
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 
-    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
-    below them until after the scripts load-->
-    <script src="bower_components/jquery/jquery.min.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/backbone/backbone.js"></script>
+  <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
+  below them until after the scripts load-->
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
 
-    <script src="data/data.js"></script>
+  <script src="data/data.js"></script>
 
-    <script src="models/SongModel.js"></script>
-    <script src="collections/Songs.js"></script>
-    <script src="collections/SongQueue.js"></script>
-    <script src="models/AppModel.js"></script>
+  <script src="models/SongModel.js"></script>
+  <script src="collections/Songs.js"></script>
+  <script src="collections/SongQueue.js"></script>
+  <script src="models/AppModel.js"></script>
 
-    <script src="views/PlayerView.js"></script>
-    <script src="views/LibraryView.js"></script>
-    <script src="views/LibraryEntryView.js"></script>
-    <script src="views/SongQueueView.js"></script>
-    <script src="views/SongQueueEntryView.js"></script>
-    <script src="views/AppView.js"></script>
-
-
-    <div id="heading">MyTunes</div>
-    <div id="main"></div>
+  <script src="views/PlayerView.js"></script>
+  <script src="views/LibraryView.js"></script>
+  <script src="views/LibraryEntryView.js"></script>
+  <script src="views/SongQueueView.js"></script>
+  <script src="views/SongQueueEntryView.js"></script>
+  <script src="views/AppView.js"></script>
 
 
-    <script>
-    $(function(){
-      // if(localStorage.app === undefined){
-            // set up model objects
-            var library =  new MyTunes.Collections.Songs(songData);
-            var app =  new MyTunes.Models.AppModel({library: library});
-
-            // build a view for the top level of the whole app
-            var appView =  new MyTunes.Views.AppView({model: app});
-
-            // put the view onto the screen
-            $('#main').append(appView.render());
+  <div id="heading">MyTunes</div>
+  <div id="main"></div>
 
 
-          // else {
-          //   console.log("Using the saved state")
-          //   var library = localStorage.library;
-          //   var app =  localStorage.app;
+  <script>
+  $(function(){
+    // if(localStorage.app === undefined){
+    // set up model objects
+    var library =  new MyTunes.Collections.Songs(songData);
+    var app =  new MyTunes.Models.AppModel({library: library});
 
-          //   // build a view for the top level of the whole app
-          //   var appView = localStorage.appView;
-          // }
+    // build a view for the top level of the whole app
+    var appView =  new MyTunes.Views.AppView({model: app});
 
-        // setInterval(function(){
-        //   console.log("SAVING ZE DATA")
-        //   localStorage.library= JSON.stringify(library);
-        //   localStorage.app = JSON.stringify(app);
-        //   localStorage.appView = JSON.stringify(appView);
-        // },10000)
-      });
-    </script>
+    // put the view onto the screen
+    $('#main').append(appView.render());
 
-    <script src="playlist.js"></script>
 
-  </body>
-  </html>
+  // else {
+  //   console.log("Using the saved state")
+  //   var library = localStorage.library;
+  //   var app =  localStorage.app;
+
+  //   // build a view for the top level of the whole app
+  //   var appView = localStorage.appView;
+  // }
+
+  // setInterval(function(){
+  //   console.log("SAVING ZE DATA")
+  //   localStorage.library= JSON.stringify(library);
+  //   localStorage.app = JSON.stringify(app);
+  //   localStorage.appView = JSON.stringify(appView);
+  // },10000)
+});
+</script>
+
+<script src="playlist.js"></script>
+
+</body>
+</html>
